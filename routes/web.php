@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SolicitudController;
 
-Route::get('/', function () {
+Route::get('/', function () {   
     return view('welcome');
 });
+
+Route::resource('solicitudes', SolicitudController::class);
